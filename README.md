@@ -18,6 +18,5 @@ A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of
 
 **Teammembers:**
 
-Rishabh Nahar
-
+Rishabh Nahar 
 Samkit Jain
