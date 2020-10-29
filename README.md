@@ -3,7 +3,7 @@
 **How to download this project and dependencies:**
 
 
-Key points to ponder upon:
+**Key points to ponder upon:**
 
 **Q. While generating matured features (polynomial features in this case), is it better to:
 A) generate the matured (polynomial) features from the given features and then scale those obtained matured features 
@@ -17,5 +17,6 @@ A.If you first scale down, your values usually lie between 0, 1 (normalise). Now
 A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of W, which is always a positive value. Now this will cause the gradient descent to always pull the value of lambda down to 0 and later negative.So now if lambda is negative, you favour larger weights as you can see that the Loss term will decrease with larger weights. This beats the point of regularisation
 
 **Teammembers:**
+
 Rishabh Nahar
 Samkit Jain
