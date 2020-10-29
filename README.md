@@ -3,6 +3,7 @@
 **How to download this project and dependencies:**
 
 **Aim:**
+In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regression and ridge regression from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder dataset.
 
 **Code Design**
 
