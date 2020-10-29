@@ -14,6 +14,26 @@ In this project I have implemented algorithms such as normal equations, gradient
 **Code Design**
 
 **Key points to ponder upon:**
+**Do all three methods give the same/similar results? If yes, Why?**
+
+Yes because ultimately we are wanting to converge to the same global minima just the way to converge has changes in fact in the normal equation we are not converging to the minima we are directing going to the minima.
+
+**Which method, out of the three would be most efficient while working with real world data?**
+
+Considering real world data is big data stochastic gradient descent will work the best because it will give us outputs in less time compared to other methods and is a computationally efficient method compared to other methods.
+
+**How does normalization/standardization help in working with the data?**
+
+ Normalization helps to convert all the features to the same scale.But what is the issue with different scales?the issue is that say is feature 1 is of scale 1000 and feature 2 is of scale 0.1 then due to feature 1 you training time will increase.Thus if we scale feature 1 to same scale of feature 2 it will improve our training time.Now as a standard procedure we scale all features to values between -1 and 1 and best way to do this is converting distribution of that feature into a normal distribution, this is called normalization.Thus normalization helps in reducing the time taken by the algorithm to converge(training time).
+
+**Does increasing the number of training iterations affect the loss?**
+
+ Yes, however it is significant only in initial stages because when no of iterations are too large the reduction in error becomes negligible.This happens because ultimately we are going to reach close to the same global minima but after a certain amount of iterations we would have already reached very close to the global minima and increasing the no of iterations further would not have much effect cause slope near the global minima is tending to 0.
+
+**What happens to the loss after a very large number of epochs (say, ~1010)**
+
+  The change in loss will become negligible but not zero exactly because you cannot reach the exact global minima you always reach close to the global minima.
+
 
 **Q. While generating matured features (polynomial features in this case), is it better to:
 A) generate the matured (polynomial) features from the given features and then scale those obtained matured features 
