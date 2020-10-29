@@ -1,6 +1,12 @@
 # Supervised-ML-Library-Implementation
 
 **How to download this project and dependencies:**
+ 1. Install Anaconda/Jupyter Notebook
+ 2. Install all dependencies/libraries as stated later
+ 3. Download all the given files and put them in a folder named “X” on the desktop
+ 4. open Anaconda Prompt and type <jupyter notebook>
+ 5. Desktop -> X -> Linear Regression
+ 6. Run the ipynb file
 
 **Aim:**
 In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regression and ridge regression from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder dataset.
