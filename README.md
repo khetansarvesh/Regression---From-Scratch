@@ -9,7 +9,7 @@
  6. Run the ipynb file
 
 ## **Aim of this project:**
-In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder dataset.
+In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder 'dataset.'
 
 ## **Code Design**
 
