@@ -1,6 +1,6 @@
 # Supervised-ML-Library-Implementation
 
-**How to download this project and dependencies:**
+## **How to download this project and dependencies:**
  1. Install Anaconda/Jupyter Notebook
  2. Install all dependencies/libraries as stated later
  3. Download all the given files and put them in a folder named “X” on the desktop
@@ -8,12 +8,13 @@
  5. Desktop -> X -> Linear Regression
  6. Run the ipynb file
 
-**Aim:**
-In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regression and ridge regression from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder dataset.
+## **Aim of this project:**
+In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder dataset.
 
-**Code Design**
+## **Code Design**
 
-**Key points to ponder upon:**
+## **Key points to ponder upon:**
+
 **Do all three methods give the same/similar results? If yes, Why?**
 
 Yes because ultimately we are wanting to converge to the same global minima just the way to converge has changes in fact in the normal equation we are not converging to the minima we are directing going to the minima.
@@ -54,7 +55,7 @@ A.If you first scale down, your values usually lie between 0, 1 (normalise). Now
 
 A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of W, which is always a positive value. Now this will cause the gradient descent to always pull the value of lambda down to 0 and later negative.So now if lambda is negative, you favour larger weights as you can see that the Loss term will decrease with larger weights. This beats the point of regularisation
 
-**Teammembers:**
+## **Teammembers:**
 
 Rishabh Nahar 
 Samkit Jain
