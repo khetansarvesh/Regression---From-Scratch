@@ -1,19 +1,19 @@
 # Supervised-ML-Library-Implementation
 
-## **How to download this project and dependencies:**
+## **How to download this project :**
  1. Install Anaconda/Jupyter Notebook
- 2. Install all dependencies/libraries as stated later
+ 2. Install following dependencies/libraries - numpy , pandas , matplotlib
  3. Download all the given files and put them in a folder named “X” on the desktop
  4. open Anaconda Prompt and type <jupyter notebook>
  5. Desktop -> X -> Linear Regression
  6. Run the ipynb file
 
-## **Aim of this project:**
+## **Aim of this project :**
 In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder 'dataset.'
 
-## **Code Design**
+## **Code Design :**
 
-## **Key points to ponder upon:**
+## **Key points to ponder upon :**
 
 **Do all three methods give the same/similar results? If yes, Why?**
 
@@ -55,7 +55,7 @@ A.If you first scale down, your values usually lie between 0, 1 (normalise). Now
 
 A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of W, which is always a positive value. Now this will cause the gradient descent to always pull the value of lambda down to 0 and later negative.So now if lambda is negative, you favour larger weights as you can see that the Loss term will decrease with larger weights. This beats the point of regularisation
 
-## **Teammembers:**
+## **Teammembers :**
 
 Rishabh Nahar 
 
