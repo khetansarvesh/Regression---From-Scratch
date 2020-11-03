@@ -13,6 +13,9 @@ In this project I have implemented algorithms such as normal equations, gradient
 
 ## **Code Design :**
 
+Following are the differenct ipynb in this project and in this section i will talk about what each of these files are coded for and their usage and the theory behind the same
+
+
 ## **Key points to ponder upon :**
 
 **Do all three methods give the same/similar results? If yes, Why?**
