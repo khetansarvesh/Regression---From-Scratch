@@ -123,6 +123,11 @@ A.If you first scale down, your values usually lie between 0, 1 (normalise). Now
 
 A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of W, which is always a positive value. Now this will cause the gradient descent to always pull the value of lambda down to 0 and later negative.So now if lambda is negative, you favour larger weights as you can see that the Loss term will decrease with larger weights. This beats the point of regularisation
 
+**Q.What primary difference did you find between the plots of Gradient Descent and Stochastic Gradient Descent?**  
+
+As you can clearly see that both gd and sgd does converge to the global minima but the convergence of gd is smooth i.e. the error always decreases while in sgd the convergence is not smooth i.e. the error might increase sometimes in middle but overall it decreases and ensures that it reaches the global minima gradually.This is due to the fact that in sgd we consider only one randomly selected data point to calculate error.You can refer to follow diagram to understand what exactly is happening in gd and sgd.
+
+
 ## **Teammembers :**
 
 Rishabh Nahar 
