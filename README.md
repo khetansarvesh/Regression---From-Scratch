@@ -10,10 +10,13 @@
 
 ## **Aim of this project :**
 In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder 'dataset.'
-The aim of the project is to implement multi linear regression via three different methods namely:
+
+The aim of the project is to implement multi linear regression and polynomial regression via different methods namely:
 normal equations
 gradient descent
 stochastic gradient descent
+gradient descent with ridge and lasso regularization
+stochastic gradient descent with ridge and lasso regularization
 
 This assignment teaches us how actually the algorithms written in the sklearn library actually works and in depth mathematical intuition behind these algorithms.
 
@@ -68,6 +71,43 @@ M = weight/coefficient			α = learning rate
 E = sum of squared error function = 1/2*(yp-yp')2where ypand yp’ are actual target value of that chosen data point and predicted value of that data point respectively
 The derivations for the vectorised formula can be understood from following image:
 
+#### Defining our Gradient Descent with Ridge Regularization Class:
+This algorithm is the same as gradient descent just that the error function changes here, this change in error function is brought so that we can handle overfitting conditions.
+
+What is overfitting?if you get good accuracy wrt train dataset but bad with test dataset then it is said that the model is overfitting the train dataset and hence we need to add some constraints to the weight vector.In ridge regression the constraint is
+
+0nMi2<some eta value , where Mi represents weight
+
+This condition can be imposed by changing the error function as stated below (results obtained from optimization theory)
+E = sum of squared error function = 1/2*1n(y-y')2 + (lambda)0mMi2
+Due to this change in error function derivative of the error function changes thus causing change in weight update formula given by
+(Mi)new= (Mi)old - (α)*((∂ E / (Mi)old))
+
+Vectorized formula derivation can be seen below
+
+
+#### Defining our Stochastic Gradient Descent with Ridge Regularization Class:
+Everything same as stochastic gradient descent just that as explained in above section to solve overfitting we add a new term in our error function and exactly same explanation goes here just that here since it is stochastic we will not be considering all the points to calculate error we will goes random point to calculate error in each iteration. Error function in this case is given by following 
+E = sum of squared error function = 1/2*(yp-yp')2+(lambda)0mMi2
+Due to this change in error function derivative of the error function changes thus causing change in weight update formula given by
+(Mi)new= (Mi)old - (α)*((∂ E / (Mi)old))
+
+Vectorized formula derivation can be seen below
+
+#### Defining our Gradient Descent with Lasso Regularization Class:
+Exactly same as the gradient descent with ridge regularization but in ridge regularization the constraint put on weight vector to solve overfitting problem is 0nMi2<some eta value while here we change this constraint and put other type of constraint that is given by 
+0nMi<some eta value, where Mi represents weight
+This condition can be imposed by changing the error function as stated below (results obtained from optimization theory)
+E = sum of squared error function = 1/2*1n(y-y')2+ (lambda)0mMi
+Due to this change in error function derivative of the error function changes thus causing change in weight update formula given by
+(Mi)new= (Mi)old - (α)*((∂ E / (Mi)old))
+
+
+#### Defining our Stochastic Gradient Descent with Lasso Regularization Class:
+Exactly same as the stochastic gradient descent with ridge regularization but in ridge regularization the constraint put on weight vector to solve overfitting problem is 0nMi2<some eta value while here we change this constraint and put other type of constraint that is given by 
+0nMi<some eta value, where Mi represents weight
+This condition can be imposed by changing the error function as stated below (results obtained from optimization theory)
+E = sum of squared error function = 1/2*(yp-yp')2+ (lambda)0mMi
 
 #### Defining Our Evaluation Metric Class:
 This class is used to calculate the accuracy of our model.Now we know that there are various accuracy measures but here we have implemented three of them namely RMSE(root mean squared error) , MSE(mean squared error) and Total Error.Formula for each of these are given below.
@@ -76,10 +116,6 @@ RMSE = (1ny - y2)/n
 MSE = (1ny - y2)/n
 Total Error(SSRES) = 0.5*1ny - y2
 For obvious reasons the lower the error i.e. closer to 0 the better is our model.All of these evaluation metrics are proportional to each other and hence can be used based on one's will.
-
-
-
-
 
 ## **Key points to ponder upon :**
 
