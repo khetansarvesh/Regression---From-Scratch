@@ -163,6 +163,36 @@ A.The thing is is L is the L2 loss function, dL/d lambda will be sum of norms of
 
 As you can clearly see that both gd and sgd does converge to the global minima but the convergence of gd is smooth i.e. the error always decreases while in sgd the convergence is not smooth i.e. the error might increase sometimes in middle but overall it decreases and ensures that it reaches the global minima gradually.This is due to the fact that in sgd we consider only one randomly selected data point to calculate error.You can refer to follow diagram to understand what exactly is happening in gd and sgd.
 
+**Q.What happens to the training and testing error as polynomials of higher degree are used for prediction?**
+
+In case of a small dataset as this as the degree of the polynomials increases, training error decreases because the model is trying to fit the training data and perfectly predict the training data but the same model might not predict the test data with same accuracy because it has fit the training data too perfectly and hence testing error increases.Such a scenario is called overfitting.
+
+**Q.Does a single global minimum exist for Polynomial Regression as well? If yes, justify.**
+Yes because the error/cost function is the same just the dataset has changed Yes,because we are ultimately generating new polynomial features and using the same error function which was earlier proved to be having a global minima.
+
+**Which form of regularization curbs overfitting better in your case? Can you think of a case when Lasso regularization works better than Ridge?**
+
+Ridge regularization had slightly better results compared to lasso regularization.Say you used no regularization and coefficients of a feature turned out to be very low like 0.000001 then we conclude that this feature is very less important and hence needs to be removed i.e. it can be removed by making it coefficient as 0. Now if we use ridge regularization this same feature coefficient turns out to be lower but ridge regularization does not reduces it to 0 but if we use lasso regularization then the coefficient of this feature becomes zero thus eliminating the least important feature and hence lasso is better in such a case.
+
+**Q.How does the regularization parameter affect the regularization process and weights? What would happen if a higher value for λ (> 2) was chosen?**
+
+Larger the regularization parameter means more penalizing of the larger weight features, hence, the extent of overfitting is inversely proportional to regularization parameter. This regularization parameter thus, helps to handle overfitting.
+
+As lambda is increased, the regression model starts to underfit the data and slowly the weights of some features become insignificant (tend to zero). For a really high lambda (>100), the regression line is almost parallel to the x-axis since only theta zero significantly contributes to the equation. Testing and training errors are extremely high in such a case.
+
+**Q.Regularization is necessary when you have a large number of features but limited training instances. Do you agree with this statement?**
+
+Yes when there are low numbers of training data points the regression model tries to fit perfectly while sometimes might lead to overfitting.Overfitting is not desirable because it gives huge errors wrt testing data. Hence, a regularization term is introduced to penalize the large parameters which is the cause of overfitting.
+
+**Q.If you are provided with D original features and are asked to generate new matured features of degree N, how many such new matured features will you be able to generate? Answer in terms of N and D.**
+
+Number of features for (D,N)= (D+N)C(N) where D is the number of the original features, N is the degree of the polynomial.(not including bias term)
+
+**Q.What is bias-variance trade off and how does it relate to overfitting and regularization.**
+
+As we know that regularization is done to prevent overfitting and overfitting is nothing but low error wrt to train dataset and high error wrt test dataset.Error wrt to train dataset is also called bias while error wrt test dataset is also called variance.Hence to prevent overfitting you need to increase the error wrt to train dataset i.e. bias and decrease the error wrt test dataset i.e. variance.
+The model with a high bias (training error) and high variance (testing error) faces a problem of under-fitting. Models with low bias and high Variance have to deal with overfitting problems. A good model would always have low Bias and low Variance. This is also called the Bias-Variance trade-off. The degree of the polynomial and the regularization parameters need to be tuned to arrive at the optimal bias-variance trade-off.
+
 
 ## **Teammembers :**
 
