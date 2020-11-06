@@ -117,6 +117,14 @@ MSE = (1ny - y2)/n
 Total Error(SSRES) = 0.5*1ny - y2
 For obvious reasons the lower the error i.e. closer to 0 the better is our model.All of these evaluation metrics are proportional to each other and hence can be used based on one's will.
 
+#### Data Preprocessing:
+First removed the children column from the given dataset and then used this dataset represented by df to develop new datasets of polynomial 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 represented by df1 ,df2, df3 , df4, df5 ,df6 ,df7 ,df8 ,df9 ,df10 respectively.
+
+Then normalized the respective polynomial dataset, special care has been taken to normalize the dataset after the generation of other higher degrees polynomial features so that if one normalizes before there might be case that some feature with value say 0.000001 when made power to 10 might turn to 0 and some values like 1.111 when done power to 10 might turn to huge value .Formula used for normalization is as follows
+X -> (X - mean)/(standard deviation)
+
+You also need to add a bias column i.e. a column of all 1s because as shown in the derivation of formula.
+
 ## **Key points to ponder upon :**
 
 **Do all three methods give the same/similar results? If yes, Why?**
