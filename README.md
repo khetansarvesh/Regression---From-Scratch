@@ -1,4 +1,4 @@
-# Supervised-ML-Library-Implementation
+# Regression - From Scratch
 
 ## **How to download this project :**
  1. Install Anaconda/Jupyter Notebook
