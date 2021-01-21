@@ -8,7 +8,7 @@
  5. Desktop -> X -> Linear Regression
  6. Run the ipynb file
 
-## **Aim of this project :**
+## **Aim of this project / Problem Statement:**
 In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder 'dataset.'
 
 The aim of the project is to implement multi linear regression and polynomial regression via different methods namely:
