@@ -1,10 +1,11 @@
 # Regression - From Scratch
 
 ## **Aim of this project / Problem Statement:**
-In this project I have implemented multi linear regression algorithm to solve the regression problem on the following dataset : 1338*4
-This project teaches us how actually the multi linear regression algorithm is written in the sklearn library actually works and in depth mathematical intuition behind these algorithms.
+This project teaches us how actually the multiple linear regression algorithm to solve the regression problem is written in the sklearn library and the indepth mathematical intuition behind this algorithm because I have implemented this algorithm from scratch.
 
 The entire theory for the implementation can be understood by refering to my notes at following link (recommended as must read): 
+
+The dataset used can be found at this link:
 
 By reading the theory you might have understood that ultimately the algorithm is an unconstrained non linear optimization problem and we know there are several ways to solve this optimization problem so here we will be solve this optimization problem via these methods from scratch:
 1. normal equations
@@ -20,8 +21,6 @@ Now we also know that to get rid of overfitting one must handle overfitting and 
 You can find the code for all of these at following link : 
 
 To better understand the code here is a walkthrough along with the indepth result analysis 
-
-
 ## **Code Design :**
 
 The code can be divided into following subsections for clear understanding:
