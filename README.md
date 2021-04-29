@@ -3,9 +3,9 @@
 ## **Aim of this project / Problem Statement:**
 This project teaches us how actually the multiple linear regression algorithm to solve the regression problem is written in the sklearn library and the indepth mathematical intuition behind this algorithm because I have implemented this algorithm from scratch.
 
-The entire theory for the implementation can be understood by refering to my notes at following link (recommended as must read): 
+The entire theory for the implementation can be understood by refering to my notes at following link (recommended as must read) : 
 
-The dataset used can be found at this link: [here](https://drive.google.com/file/d/1Hnpbhnl0NU1-o4UJao2GukOZeQWiX6Gk/view?usp=sharing)
+The dataset used can be found at this link : [here](https://drive.google.com/file/d/1Hnpbhnl0NU1-o4UJao2GukOZeQWiX6Gk/view?usp=sharing)
 
 By reading the theory you might have understood that ultimately the algorithm is an unconstrained non linear optimization problem and we know there are several ways to solve this optimization problem so here we will be solve this optimization problem via these methods from scratch:
 1. normal equations
@@ -18,7 +18,7 @@ Now we also know that to get rid of overfitting one must handle overfitting and 
 3. Lasso Regularization with gradient descent 
 4. Lasso Regularization with stochastic gradient descent
 
-You can find the code for all of these at following link : 
+You can find the code for all of these at following link : [here](https://drive.google.com/file/d/16AhDb5zLYxowEmUMTyHsmupHjUT_3x6Q/view?usp=sharing)
 
 To better understand the code here is a walkthrough along with the indepth result analysis 
 ## **Code Design :**
