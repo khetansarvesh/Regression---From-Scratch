@@ -45,7 +45,6 @@ The dataset used in this project consists of three independent features i.e. age
 normalization is as follows
 X -> (X - mean)/(standard deviation)
 
-You also need to add a bias column i.e. a column of all 1s because as shown in the derivation of formula.
 ### Defining Our Normal Equation Class:
 Here once we get the error function we differentiate it w.r.t. all the weights and equate all the derivatives to zero because we want to reach the  global minima of the curve and at the global minima slope is zero i.e. derivative of the function is zero. Hence we need to solve the n+1 simultaneous equation for n independent + 1 bias variable.
 
@@ -54,7 +53,7 @@ To understand the math and derivation of the vectorized formula used in this cla
 As you can see that since this method involves inversion of a matrix and inverting a matrix is computationally very expensive hence we required a more efficient method to reach the global minima and one of the way is gradient descent.One is advised to use this method if no of independent variables is 1000 or less, though this is not a strict condition but can be handy.(source-- Andrew Ng)
 
 
-#### Defining Our Gradient Descent Class:
+### Defining Our Gradient Descent Class:
 In this method we don't directly go to the minima but instead we reach close to the global minima of the cost/error function gradually by jumping from point to another point.This new point in every iteration is decided by the gradient at that old point. 
 
 Initial / starting value of these weights can be taken any random value, but we have taken them as all zeros, it won't matter at what initial point one is starting because ultimately the goal is to converge to the global minima.
@@ -73,7 +72,7 @@ The stopping criteria for our implementation is when change in error difference 
 
 As you can see that since this method involves calculating error w.r.t all the datapoints, we can further implore the time taken to run the algorithm by considering only few data points, this is called mini batch gradient descent and if only 1 datapoint is considered then it is called stochastic gradient descent.One is advised to use this method if no of independent variables is 1000000 or less, though this is not a strict condition but can be handy.(source-- Andrew Ng)
 
-#### Defining Our Stochastic Gradient Descent Class:
+### Defining Our Stochastic Gradient Descent Class:
 This algorithm is almost exactly the same as gradient descent but the only difference here is that while considering the error function in gradient descent we used error due to all points but in stochastic gradient descent we consider error only due to a single random point in the dataset.
 
 Hence now the weights are updated using following formula:
@@ -84,7 +83,7 @@ M = weight/coefficient			α = learning rate
 E = sum of squared error function = 1/2*(yp-yp')2where ypand yp’ are actual target value of that chosen data point and predicted value of that data point respectively
 The derivations for the vectorised formula can be understood from following image:
 
-#### Defining our Gradient Descent with Ridge Regularization Class:
+### Defining our Gradient Descent with Ridge Regularization Class:
 This algorithm is the same as gradient descent just that the error function changes here, this change in error function is brought so that we can handle overfitting conditions.
 
 What is overfitting?if you get good accuracy wrt train dataset but bad with test dataset then it is said that the model is overfitting the train dataset and hence we need to add some constraints to the weight vector.In ridge regression the constraint is
@@ -99,7 +98,7 @@ Due to this change in error function derivative of the error function changes th
 Vectorized formula derivation can be seen below
 
 
-#### Defining our Stochastic Gradient Descent with Ridge Regularization Class:
+### Defining our Stochastic Gradient Descent with Ridge Regularization Class:
 Everything same as stochastic gradient descent just that as explained in above section to solve overfitting we add a new term in our error function and exactly same explanation goes here just that here since it is stochastic we will not be considering all the points to calculate error we will goes random point to calculate error in each iteration. Error function in this case is given by following 
 E = sum of squared error function = 1/2*(yp-yp')2+(lambda)0mMi2
 Due to this change in error function derivative of the error function changes thus causing change in weight update formula given by
@@ -116,13 +115,13 @@ Due to this change in error function derivative of the error function changes th
 (Mi)new= (Mi)old - (α)*((∂ E / (Mi)old))
 
 
-#### Defining our Stochastic Gradient Descent with Lasso Regularization Class:
+### Defining our Stochastic Gradient Descent with Lasso Regularization Class:
 Exactly same as the stochastic gradient descent with ridge regularization but in ridge regularization the constraint put on weight vector to solve overfitting problem is 0nMi2<some eta value while here we change this constraint and put other type of constraint that is given by 
 0nMi<some eta value, where Mi represents weight
 This condition can be imposed by changing the error function as stated below (results obtained from optimization theory)
 E = sum of squared error function = 1/2*(yp-yp')2+ (lambda)0mMi
 
-#### Defining Our Evaluation Metric Class:
+### Defining Our Evaluation Metric Class:
 This class is used to calculate the accuracy of our model.Now we know that there are various accuracy measures but here we have implemented three of them namely RMSE(root mean squared error) , MSE(mean squared error) and Total Error.Formula for each of these are given below.
 
 RMSE = (1ny - y2)/n
