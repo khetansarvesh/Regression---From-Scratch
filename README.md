@@ -1,6 +1,6 @@
 # Regression - From Scratch
 
-## **How to download this project :**
+## **How to download and run this project :**
  1. Install Anaconda/Jupyter Notebook
  2. Install following dependencies/libraries - numpy , pandas , matplotlib
  3. Download all the given files and put them in a folder named “X” on the desktop
@@ -9,24 +9,28 @@
  6. Run the ipynb file
 
 ## **Aim of this project / Problem Statement:**
-In this project I have implemented algorithms such as normal equations, gradient descent, stochastic gradient descent, lasso regularization and ridge regularization from scratch and done linear as well as polynomial regression analysis on a 1338*4 dimension dataset which is available in the folder 'dataset.'
+In this project I have implemented multi linear regression algorithm to solve the regression problem on the following dataset : 1338*4
+This project teaches us how actually the multi linear regression algorithm is written in the sklearn library actually works and in depth mathematical intuition behind these algorithms.
 
-The aim of the project is to implement multi linear regression and polynomial regression via different methods namely:
-normal equations
-gradient descent
-stochastic gradient descent
-gradient descent with ridge and lasso regularization
-stochastic gradient descent with ridge and lasso regularization
+The entire theory for the implementation can be understood by refering to my notes at following link (recommended as must read): 
 
-This assignment teaches us how actually the algorithms written in the sklearn library actually works and in depth mathematical intuition behind these algorithms.
+By reading the theory you might have understood that ultimately the algorithm is an unconstrained non linear optimization problem and we know there are several ways to solve this optimization problem so here we will be solve this optimization problem via these methods from scratch:
+1. normal equations
+2. gradient descent
+3. stochastic gradient descent
 
-The dataset used in this project consists of three independent features i.e. age(X1), bmi(X2) and number of children of an individual(X3) and a dependent feature insurance amount for that person(Y).Our goal is to use these independent features to predict the values of dependent feature for which we need to devise algorithms to learn the coefficients w.r.t. each independent variable.
+Now we also know that to get rid of overfitting one must handle overfitting and there are several ways to handle overfitting but here I have implemented following ways from scratch to handle overfitting:
+1. Ridge Regularization with gradient descent
+2. Ridge Regularization with stochastic gradient descent
+3. Lasso Regularization with gradient descent 
+4. Lasso Regularization with stochastic gradient descent
 
-Y = C + M1X1+ M2X2+M3X3
+You can find the code for all of these at following link : 
 
-## **Code Design and Derivations :**
+To better understand the code here is a walkthrough along with the indepth result analysis 
 
-Following are the differenct ipynb in this project and in this section i will talk about what each of these files are coded for and their usage and the theory behind the same
+
+## **Code Design :**
 
 The code can be divided into following subsections for clear understanding:
 
@@ -118,6 +122,10 @@ Total Error(SSRES) = 0.5*1ny - y2
 For obvious reasons the lower the error i.e. closer to 0 the better is our model.All of these evaluation metrics are proportional to each other and hence can be used based on one's will.
 
 #### Data Preprocessing:
+1. Reading the dataset
+
+The dataset used in this project consists of three independent features i.e. age(X1), bmi(X2) and number of children of an individual(X3) and a dependent feature insurance amount for that person(Y).Our goal is to use these independent features to predict the values of dependent feature for which we need to devise algorithms to learn the coefficients w.r.t. each independent variable.
+
 First removed the children column from the given dataset and then used this dataset represented by df to develop new datasets of polynomial 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 represented by df1 ,df2, df3 , df4, df5 ,df6 ,df7 ,df8 ,df9 ,df10 respectively.
 
 Then normalized the respective polynomial dataset, special care has been taken to normalize the dataset after the generation of other higher degrees polynomial features so that if one normalizes before there might be case that some feature with value say 0.000001 when made power to 10 might turn to 0 and some values like 1.111 when done power to 10 might turn to huge value .Formula used for normalization is as follows
@@ -201,9 +209,3 @@ Number of features for (D,N)= (D+N)C(N) where D is the number of the original fe
 As we know that regularization is done to prevent overfitting and overfitting is nothing but low error wrt to train dataset and high error wrt test dataset.Error wrt to train dataset is also called bias while error wrt test dataset is also called variance.Hence to prevent overfitting you need to increase the error wrt to train dataset i.e. bias and decrease the error wrt test dataset i.e. variance.
 The model with a high bias (training error) and high variance (testing error) faces a problem of under-fitting. Models with low bias and high Variance have to deal with overfitting problems. A good model would always have low Bias and low Variance. This is also called the Bias-Variance trade-off. The degree of the polynomial and the regularization parameters need to be tuned to arrive at the optimal bias-variance trade-off.
 
-
-## **Teammembers :**
-
-Rishabh Nahar 
-
-Samkit Jain
