@@ -1,13 +1,5 @@
 # Regression - From Scratch
 
-## **How to download and run this project :**
- 1. Install Anaconda/Jupyter Notebook
- 2. Install following dependencies/libraries - numpy , pandas , matplotlib
- 3. Download all the given files and put them in a folder named “X” on the desktop
- 4. open Anaconda Prompt and type <jupyter notebook>
- 5. Desktop -> X -> Linear Regression
- 6. Run the ipynb file
-
 ## **Aim of this project / Problem Statement:**
 In this project I have implemented multi linear regression algorithm to solve the regression problem on the following dataset : 1338*4
 This project teaches us how actually the multi linear regression algorithm is written in the sklearn library actually works and in depth mathematical intuition behind these algorithms.
