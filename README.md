@@ -34,10 +34,19 @@ To better understand the code here is a walkthrough along with the indepth resul
 
 The code can be divided into following subsections for clear understanding:
 
-#### Importing Required Libraries:
+### Importing Required Libraries:
 You need to install and import numpy, pandas and matplotlib libraries to successfully run this project 
 
-#### Defining Our Normal Equation Class:
+### Data Preprocessing:
+1. Reading the dataset
+
+The dataset used in this project consists of three independent features i.e. age(X1), bmi(X2) and number of children of an individual(X3) and a dependent feature insurance amount for that person(Y).Our goal is to use these independent features to predict the values of dependent feature for which we need to devise algorithms to learn the coefficients w.r.t. each independent variable.
+
+normalization is as follows
+X -> (X - mean)/(standard deviation)
+
+You also need to add a bias column i.e. a column of all 1s because as shown in the derivation of formula.
+### Defining Our Normal Equation Class:
 Here once we get the error function we differentiate it w.r.t. all the weights and equate all the derivatives to zero because we want to reach the  global minima of the curve and at the global minima slope is zero i.e. derivative of the function is zero. Hence we need to solve the n+1 simultaneous equation for n independent + 1 bias variable.
 
 To understand the math and derivation of the vectorized formula used in this class please refer to the following pictures.It is better to vectorize our algorithm rather than using a loop to iterate over all the data points because it makes our algorithm more efficient.
@@ -121,17 +130,7 @@ MSE = (1ny - y2)/n
 Total Error(SSRES) = 0.5*1ny - y2
 For obvious reasons the lower the error i.e. closer to 0 the better is our model.All of these evaluation metrics are proportional to each other and hence can be used based on one's will.
 
-#### Data Preprocessing:
-1. Reading the dataset
 
-The dataset used in this project consists of three independent features i.e. age(X1), bmi(X2) and number of children of an individual(X3) and a dependent feature insurance amount for that person(Y).Our goal is to use these independent features to predict the values of dependent feature for which we need to devise algorithms to learn the coefficients w.r.t. each independent variable.
-
-First removed the children column from the given dataset and then used this dataset represented by df to develop new datasets of polynomial 1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 represented by df1 ,df2, df3 , df4, df5 ,df6 ,df7 ,df8 ,df9 ,df10 respectively.
-
-Then normalized the respective polynomial dataset, special care has been taken to normalize the dataset after the generation of other higher degrees polynomial features so that if one normalizes before there might be case that some feature with value say 0.000001 when made power to 10 might turn to 0 and some values like 1.111 when done power to 10 might turn to huge value .Formula used for normalization is as follows
-X -> (X - mean)/(standard deviation)
-
-You also need to add a bias column i.e. a column of all 1s because as shown in the derivation of formula.
 
 ## **Key points to ponder upon :**
 
