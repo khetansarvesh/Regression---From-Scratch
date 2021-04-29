@@ -19,8 +19,6 @@ Now we also know that to get rid of overfitting one must handle overfitting and 
 4. Lasso Regularization with stochastic gradient descent
 
 You can find the code for all of these at following link : [here](https://drive.google.com/file/d/16AhDb5zLYxowEmUMTyHsmupHjUT_3x6Q/view?usp=sharing) (open with google colab)
-
-To better understand the code here is a walkthrough along with the indepth result analysis 
 ## **Code Design :**
 
 The code can be divided into following subsections for clear understanding:
