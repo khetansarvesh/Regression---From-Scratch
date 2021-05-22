@@ -7,11 +7,11 @@ Please refer to the pdf uploaded above to get access to all my notes and code re
 
 **Theory (my notes) on this topic can be found here (recommended read to understand the code)** : https://drive.google.com/drive/folders/1nNSS4z9_G5XZFsEqpurSrf-on30tquiU?usp=sharing
 
-**here I have implemented lasso regression and ridge regression to curb overfitting**
+**Here I have implemented 'lasso regression' and 'ridge regression' to curb overfitting**
 
-Dataset used in this algorithm can be found here : 
+**Dataset used in this algorithm can be found here :**
 https://drive.google.com/file/d/1GH7Y-R7X03JbPrlHBp0LT5toF4pL0a-H/view?usp=sharing
 
-Code Implementation can be found here : 
+**Code Implementation can be found here :** 
 
 
