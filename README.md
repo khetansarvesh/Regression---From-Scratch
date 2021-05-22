@@ -4,7 +4,7 @@ Here I have implemented algorithms from scratch to solve the regression problem.
 Please refer to the pdf uploaded above to get access to all my notes and code related to this topic.
 
 ## 2. Polynomial Regression
-** here I have implemented lasso regression and ridge regression to curb overfitting
+** here I have implemented lasso regression and ridge regression to curb overfitting **
 
 Theory(my notes) on this topic can be found here (recommended read to understand the code) : https://drive.google.com/drive/folders/1nNSS4z9_G5XZFsEqpurSrf-on30tquiU?usp=sharing
 
