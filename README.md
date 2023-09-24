@@ -5,7 +5,8 @@ Please refer to the pdf uploaded above to get access to all my notes and code re
 
 ## 2. Polynomial Regression
 
-**Theory (my notes) on this topic can be found here (recommended read to understand the code)** : https://drive.google.com/drive/folders/1Mq-nsigZpoJCAnGLmD5miYpBDLo4Kspn?usp=sharing
+**Theory (my notes) on this topic can be found here (recommended read to understand the code)** : 
+https://drive.google.com/drive/folders/1Mq-nsigZpoJCAnGLmD5miYpBDLo4Kspn?usp=sharing
 
 **Here I have implemented 'lasso regression' and 'ridge regression' to curb overfitting**
 
